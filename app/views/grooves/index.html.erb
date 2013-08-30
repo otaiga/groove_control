@@ -1,0 +1,9 @@
+<h1>Groovy</h1>
+<%= form_tag grooves_path, :method => "post" do %>
+  <%= text_field_tag 'song', nil, :placeholder => 'Enter song name and artist'%>
+  <%= submit_tag "submit" %>
+<% end %>
+<%= link_to "Play", play_control_path(:command => "play") %>
+<%= link_to "<<", play_control_path(:command => "back") %>
+<%= link_to "Pause", play_control_path(:command => "pause") %>
+<%= link_to ">>", play_control_path(:command => "forward") %>
