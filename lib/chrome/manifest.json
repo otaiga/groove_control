@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Groove player",
+  "description": "This extension works with groove to run a jukebox",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://grooveshark.com/"],
+      "js": ["popup.js"]
+    }
+  ],
+  "web_accessible_resources": ["script.js"],
+  "permissions": [
+    "http://grooveshark.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
